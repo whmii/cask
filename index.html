@@ -6,7 +6,7 @@
 <meta content='width=device-width, initial-scale=1' name='viewport'>
 <meta content='noindex, nofollow' name='robots'>
 <title>Cask | Examples</title>
-<link href="assets/stylesheets/app-860e7c42.css" rel="stylesheet" type="text/css" />
+<link href="assets/stylesheets/app-4285f16d.css" rel="stylesheet" type="text/css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
 <script src="assets/javascripts/all-da39a3ee.js" type="text/javascript"></script>
 </head>
@@ -49,6 +49,10 @@ It’s easy to use in conjunction with flex-box
 </ul>
 </header>
 <main class='example'>
+<section>
+<h1 class='section-title'>
+Some Examples
+</h1>
 <div class='row'>
 <div class='col-1'>
 <div class='content'>
@@ -201,6 +205,11 @@ It’s easy to use in conjunction with flex-box
 </div>
 </div>
 </div>
+</section>
+<section>
+<h1 class='section-title'>
+Centered Grids
+</h1>
 <div class='row'>
 <div class='col-2-center'>
 <div class='content'>
@@ -208,13 +217,45 @@ It’s easy to use in conjunction with flex-box
 </div>
 </div>
 </div>
+</section>
+<section>
+<h1 class='section-title'>
+Nested Grids
+</h1>
+<div class='row'>
+<div class='col-2'>
+<div class='content'>
+<code>$columns: 6</code>
+</div>
+</div>
+<div class='col-2-collapse'>
+<div class='col-2'>
+<div class='content'>
+<code>$columns: 6</code>
+</div>
+</div>
+<div class='col-2-collapse'>
+<div class='col-2'>
+<div class='content'>
+<code>6</code>
+</div>
+</div>
+<div class='col-2'>
+<div class='content'>
+<code>6</code>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 </main>
 <footer>
 <h1>
 Here’s the thing… There is no spoon.
 </h1>
 <p>
-Just because your using a grid gramework doesn’t mean you have to use it for everything. If you need a variable, use a variable. If you need a calculation use a function. If you need a bunch more, then use a mixin. Cask is made to be usable with as little implimentation as possible. Here’s an example.
+Just because your using a grid framework doesn’t mean you have to use it for everything. If you need a variable, use a variable. If you need a calculation use a function. If you need a bunch more, then use a mixin. Cask is made to be usable with as little implementation as possible. Here’s an example.
 </p>
 <pre><code>.foo {&#x000A;  width: grid-calc(4); // Makes this 4 columns wide!&#x000A;  padding: 0 $column-gutter; // Now it’s got padding just like a row + column!!&#x000A;}</code></pre>
 </footer>
