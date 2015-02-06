@@ -29,6 +29,8 @@ $total-columns: 12 !default;
 
   width: 100%;
   max-width: $row-width;
+  margin-#{$default-float}: auto;
+  margin-#{$opposite-direction}: auto;
 
   @if $collapse == none {
     // Use $collapse: none to avoid defining padding
@@ -40,11 +42,6 @@ $total-columns: 12 !default;
     // Add gutter padding by default
     padding-left: $column-gutter / 2;
     padding-right: $column-gutter / 2;
-  }
-
-  @if $collapse == none {
-    margin-#{$default-float}: auto;
-    margin-#{$opposite-direction}: auto;
   }
 
   @include clearfix;
