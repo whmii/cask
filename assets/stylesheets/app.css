@@ -305,3 +305,12 @@ picture {
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
+@media only screen and (min-width: 768px) {
+  /* line 62, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  .example .col-3-center {
+    width: 33.33333%;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important; } }
