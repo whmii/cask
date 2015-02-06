@@ -1,0 +1,43 @@
+// Project Settings
+// ============================================================
+
+// ========= Typography & Metrics =========
+
+$base-font-size: 1em;
+$base-line-height: 1.6;
+$header-line-height: 1.2;
+
+// ========= Grid Variables =========
+
+$default-float: left;
+$text-direction: ltr;
+$opposite-direction: right;
+
+@if $text-direction == ltr {
+  $default-float: left;
+  $opposite-direction: right;
+} @else {
+  $default-float: right;
+  $opposite-direction: left;
+}
+
+$row-width: em(1280);
+$column-gutter: em(20);
+$total-columns: 12;
+
+$column-width: ($row-width / $total-columns);
+
+// ========= Media Queries =========
+
+// Media Queries
+
+$small-screen: 768px !default;
+$medium-screen: 1280px !default;
+$large-screen: 1440px !default;
+
+$screen: "only screen" !default;
+$small: "only screen and (min-width: #{$small-screen})" !default;
+$medium: "only screen and (min-width:#{$medium-screen})" !default;
+$large: "only screen and (min-width:#{$large-screen})" !default;
+$landscape: "only screen and (orientation: landscape)" !default;
+$portrait: "only screen and (orientation: portrait)" !default;
