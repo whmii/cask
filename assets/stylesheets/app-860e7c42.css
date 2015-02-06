@@ -203,12 +203,13 @@ a {
           transition: color 0.1s linear; }
   /* line 31, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
   a:active, a:focus, a:hover {
-    color: #2c5999; }
-  /* line 37, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
+    color: #2c5999;
+    text-decoration: underline; }
+  /* line 38, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
   a:active, a:focus {
     outline: none; }
 
-/* line 43, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
+/* line 44, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
 hr {
   border-bottom: 1px solid #ddd;
   border-left: none;
@@ -216,17 +217,17 @@ hr {
   border-top: none;
   margin: 1.5em 0; }
 
-/* line 51, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
+/* line 52, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
 img,
 picture {
   margin: 0;
   max-width: 100%; }
 
-/* line 57, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
+/* line 58, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
 code {
   font-family: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace; }
 
-/* line 61, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
+/* line 62, /Users/whmii/workspace/cask/source/assets/stylesheets/base/_typography.scss */
 pre {
   background-color: rgba(51, 51, 51, 0.1);
   border-radius: 3px;
@@ -257,11 +258,23 @@ pre {
   .header .title {
     font-size: 6.25em;
     margin-bottom: 0;
-    padding: 0;
     text-align: center;
     background-color: #333;
-    color: white; }
-  /* line 15, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+    color: white;
+    padding-bottom: 0.5em; }
+    /* line 14, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+    .header .title small {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.75em;
+      line-height: 1.5; }
+    /* line 21, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+    .header .title a {
+      color: white; }
+      /* line 24, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+      .header .title a.contact {
+        margin: 0 0.75em; }
+  /* line 30, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .header .description li {
     padding: 0.75em;
     border-bottom: 1px solid #ddd; }
@@ -272,15 +285,20 @@ pre {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
-      /* line 23, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
-      .header .title,
+      /* line 38, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
       .header .description {
         width: 50%;
         padding-left: 0.625em;
         padding-right: 0.625em;
+        float: left; }
+      /* line 42, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+      .header .title {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 0;
         float: left; } }
 
-/* line 32, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+/* line 51, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
 .example .row {
   width: 100%;
   max-width: 80em;
@@ -295,7 +313,7 @@ pre {
     clear: both;
     content: "";
     display: table; }
-/* line 38, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+/* line 57, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
 .example .content {
   background-color: #ddd;
   display: block;
@@ -304,7 +322,7 @@ pre {
   line-height: 10em;
   white-space: nowrap;
   text-align: center; }
-/* line 48, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+/* line 67, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
 .example [class^="col-"] {
   width: 100%;
   padding-left: 0.625em;
@@ -313,42 +331,42 @@ pre {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd; }
 @media only screen and (min-width: 768px) {
-  /* line 54, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 73, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-2 {
     width: 50%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 61, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 80, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-3 {
     width: 33.33333%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 68, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 87, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-4 {
     width: 25%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 75, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 94, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-6 {
     width: 16.66667%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 82, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 101, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-12 {
     width: 8.33333%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 89, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 108, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-2-center {
     width: 50%;
     padding-left: 0.625em;
