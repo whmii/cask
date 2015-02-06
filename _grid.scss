@@ -1,0 +1,83 @@
+// Grid Styles
+// ============================================================
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+// Grid Variables
+
+$row-width: rem(1000) !default;
+$column-gutter: rem(30) !default;
+$total-columns: 12 !default;
+
+// Grid-Calc Function
+
+@function grid-calc($colNumber, $totalColumns: $total-columns) {
+  @return percentage($colNumber / $totalColumns);
+}
+
+// ========= Grid Mixins ========
+
+// Create default and collapsed rows
+
+// $behavior - Default: false. Options: nest, false.
+@mixin grid-row(
+    $collapse: false,
+    $center:true
+  ) {
+
+  width: 100%;
+  max-width: $row-width;
+
+  @if $collapse == none {
+    // Use $collapse: none to avoid defining padding
+  } @else if $collapse {
+    // If collapse, remove gutter padding
+    padding-left: 0;
+    padding-right: 0;
+  } @else if $collapse == false {
+    // Add gutter padding by default
+    padding-left: $column-gutter / 2;
+    padding-right: $column-gutter / 2;
+  }
+
+  @if $collapse == none {
+    margin-#{$default-float}: auto;
+    margin-#{$opposite-direction}: auto;
+  }
+
+  @include clearfix;
+}
+
+@mixin grid-column(
+    $columns: false,
+    $collapse: false,
+    $center: false
+  ) {
+
+  @if $columns {
+    // If a column number is given, calculate the column width
+    width: grid-calc($columns, $total-columns);
+  }
+
+  @if $collapse == none {
+    // Use $collapse: none to avoid defining padding
+  } @else if $collapse {
+    // If collapsed, remove of gutter padding
+    padding-left: 0;
+    padding-right: 0;
+  } @else if $collapse == false {
+    // Add gutter padding by default
+    padding-left: $column-gutter / 2;
+    padding-right: $column-gutter / 2;
+  }
+
+  @if $center {
+    margin-#{$default-float}: auto;
+    margin-#{$opposite-direction}: auto;
+    float: none !important;
+  } @else {
+    float: $default-float;
+  }
+}
