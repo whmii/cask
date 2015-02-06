@@ -10,7 +10,9 @@ set :relative_links, true
 
 activate :autoprefixer
 
-set :haml, { :ugly => true, :format => :html5 }
+activate :asset_hash
+
+set :haml, { ugly: true, format: :html5 }
 
 configure :build do
 

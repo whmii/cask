@@ -1,0 +1,80 @@
+.header {
+  @include grid-row($collapse: true);
+}
+
+.example {
+
+  .row {
+    @include grid-row;
+    background-color: $medium-gray;
+    margin-bottom: 1em;
+  }
+
+  .content {
+    background-color: $light-gray;
+    display: block;
+    margin-bottom: em(2);
+    margin-top: em(2);
+    min-height: 10em;
+  }
+
+  [class^="col-"] {
+    @include grid-column($columns: 12);
+    border-left: $base-border;
+    border-right: $base-border;
+  }
+
+  .col-2 {
+
+    @media #{$small} {
+      @include grid-column($columns: 6);
+    }
+  }
+
+  .col-3 {
+
+    @media #{$small} {
+      @include grid-column($columns: 4);
+    }
+  }
+
+  .col-4 {
+
+    @media #{$small} {
+      @include grid-column($columns: 3);
+    }
+  }
+
+  .col-6 {
+
+    @media #{$small} {
+      @include grid-column($columns: 2);
+    }
+  }
+
+  .col-12 {
+
+    @media #{$small} {
+      @include grid-column($columns: 1);
+    }
+  }
+
+  .col-3-center {
+
+    @media #{$small} {
+      @include grid-column($columns: 4, $center: true);
+    }
+  }
+}
+
+@media #{$screen} {}
+
+@media #{$small} {}
+
+@media #{$medium} {}
+
+@media #{$large} {}
+
+@media #{$landscape} {}
+
+@media #{$portrait} {}
