@@ -25,120 +25,49 @@ title: Cask | Examples
         %code
           @include grid-column($columns: 12);
   .row
-    .col-2
-      .content
-        %code
-          @include grid-column($columns: 6);
-    .col-2
-      .content
-        %code
-          @include grid-column($columns: 6);
+    - 2.times do
+      .col-2
+        .content
+          %code
+            @include grid-column($columns: 6);
   .row
-    .col-3
-      .content
-        %code
-          $columns: 4
-    .col-3
-      .content
-        %code
-          $columns: 4
-    .col-3
-      .content
-        %code
-          $columns: 4
+    - 3.times do
+      .col-3
+        .content
+          %code
+            $columns: 4
   .row
-    .col-4
-      .content
-        %code
-          3
-    .col-4
-      .content
-        %code
-          3
-    .col-4
-      .content
-        %code
-          3
-    .col-4
-      .content
-        %code
-          3
+    - 4.times do
+      .col-4
+        .content
+          %code
+            3
   .row
-    .col-6
-      .content
-        %code
-          2
-    .col-6
-      .content
-        %code
-          2
-    .col-6
-      .content
-        %code
-          2
-    .col-6
-      .content
-        %code
-          2
-    .col-6
-      .content
-        %code
-          2
-    .col-6
-      .content
-        %code
-          2
+    - 6.times do
+      .col-6
+        .content
+          %code
+            2
   .row
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
-    .col-12
-      .content
-        %code
-          1
+    - 12.times do
+      .col-12
+        .content
+          %code
+            1
   .row
     .col-2-center
       .content
         %code
           @include grid-column($columns: 6, $center: true);
+%footer
+  %h1
+    Here’s the thing… There is no spoon.
+  %p
+    Just because your using a grid gramework doesn’t mean you have to use it for everything. If you need a variable, use a variable. If you need a calculation use a function. If you need a bunch more, then use a mixin. Cask is made to be usable with as little implimentation as possible. Here’s an example.
+  %pre
+    %code
+      :preserve
+        .foo {
+          width: grid-calc(4); // Makes this 4 columns wide!
+          padding: 0 $column-gutter; // Now it’s got padding just like a row + column!!
+        }
