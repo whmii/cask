@@ -1,5 +1,30 @@
 .header {
   @include grid-row($collapse: true);
+  margin-bottom: 1em;
+
+
+  .title {
+    font-size: 6.25em;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    background-color: $base-font-color;
+    color: white;
+  }
+
+  .description li {
+    padding: $small-spacing;
+    border-bottom: $base-border;
+  }
+
+  @media #{$small} {
+    display: flex;
+
+    .title,
+    .description {
+      @include grid-column($columns: 6);
+    }
+  }
 }
 
 .example {
@@ -15,7 +40,9 @@
     display: block;
     margin-bottom: em(2);
     margin-top: em(2);
-    min-height: 10em;
+    line-height: 10em;
+    white-space: nowrap;
+    text-align: center;
   }
 
   [class^="col-"] {
@@ -59,10 +86,10 @@
     }
   }
 
-  .col-3-center {
+  .col-2-center {
 
     @media #{$small} {
-      @include grid-column($columns: 4, $center: true);
+      @include grid-column($columns: 6, $center: true);
     }
   }
 }

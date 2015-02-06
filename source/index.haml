@@ -5,69 +5,140 @@ title: Cask | Examples
 %header.header
   %h1.title
     Cask
+  %ul.description
+    %li
+      Cask is only ~84 lines of code so its basically fully knowable
+    %li
+      Because of its simplicity there is virtually no “where is this coming from!?”
+    %li
+      The syntax for media queries is greatly simplified
+    %li
+      There is no use of relative positioning or nth child selectors
+    %li
+      Cask is built around defining as few attributes as possible
+    %li
+      It’s easy to use in conjunction with flex-box
 %main.example
   .row
     .col-1
       .content
+        %code
+          @include grid-column($columns: 12);
   .row
     .col-2
       .content
+        %code
+          @include grid-column($columns: 6);
     .col-2
       .content
+        %code
+          @include grid-column($columns: 6);
   .row
     .col-3
       .content
+        %code
+          $columns: 4
     .col-3
       .content
+        %code
+          $columns: 4
     .col-3
       .content
+        %code
+          $columns: 4
   .row
     .col-4
       .content
+        %code
+          3
     .col-4
       .content
+        %code
+          3
     .col-4
       .content
+        %code
+          3
     .col-4
       .content
+        %code
+          3
   .row
     .col-6
       .content
+        %code
+          2
     .col-6
       .content
+        %code
+          2
     .col-6
       .content
+        %code
+          2
     .col-6
       .content
+        %code
+          2
     .col-6
       .content
+        %code
+          2
     .col-6
       .content
+        %code
+          2
   .row
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
     .col-12
       .content
+        %code
+          1
   .row
-    .col-3-center
+    .col-2-center
       .content
+        %code
+          @include grid-column($columns: 6, $center: true);
