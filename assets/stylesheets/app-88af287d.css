@@ -233,14 +233,41 @@ picture {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  margin-bottom: 1em; }
   /* line 9, /Users/whmii/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bourbon-4.1.1/app/assets/stylesheets/addons/_clearfix.scss */
   .header::after {
     clear: both;
     content: "";
     display: table; }
+  /* line 6, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  .header .title {
+    font-size: 6.25em;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+    color: white; }
+  /* line 15, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  .header .description li {
+    padding: 0.75em;
+    border-bottom: 1px solid #ddd; }
+  @media only screen and (min-width: 768px) {
+    /* line 1, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+    .header {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      /* line 23, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+      .header .title,
+      .header .description {
+        width: 50%;
+        padding-left: 0.625em;
+        padding-right: 0.625em;
+        float: left; } }
 
-/* line 7, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+/* line 32, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
 .example .row {
   width: 100%;
   max-width: 80em;
@@ -255,14 +282,16 @@ picture {
     clear: both;
     content: "";
     display: table; }
-/* line 13, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+/* line 38, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
 .example .content {
   background-color: #ddd;
   display: block;
   margin-bottom: 0.125em;
   margin-top: 0.125em;
-  min-height: 10em; }
-/* line 21, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  line-height: 10em;
+  white-space: nowrap;
+  text-align: center; }
+/* line 48, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
 .example [class^="col-"] {
   width: 100%;
   padding-left: 0.625em;
@@ -271,44 +300,44 @@ picture {
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd; }
 @media only screen and (min-width: 768px) {
-  /* line 27, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 54, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-2 {
     width: 50%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 34, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 61, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-3 {
     width: 33.33333%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 41, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 68, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-4 {
     width: 25%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 48, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 75, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-6 {
     width: 16.66667%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 55, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  /* line 82, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
   .example .col-12 {
     width: 8.33333%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     float: left; } }
 @media only screen and (min-width: 768px) {
-  /* line 62, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
-  .example .col-3-center {
-    width: 33.33333%;
+  /* line 89, /Users/whmii/workspace/cask/source/assets/stylesheets/_example.scss */
+  .example .col-2-center {
+    width: 50%;
     padding-left: 0.625em;
     padding-right: 0.625em;
     margin-left: auto;
