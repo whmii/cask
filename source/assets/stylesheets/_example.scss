@@ -6,10 +6,25 @@
   .title {
     font-size: 6.25em;
     margin-bottom: 0;
-    padding: 0;
     text-align: center;
     background-color: $base-font-color;
     color: white;
+    padding-bottom: 0.5em;
+
+    small {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.75em;
+      line-height: 1.5;
+    }
+
+    a {
+      color: white;
+
+      &.contact {
+        margin: 0 0.75em;
+      }
+    }
   }
 
   .description li {
@@ -20,9 +35,13 @@
   @media #{$small} {
     display: flex;
 
-    .title,
     .description {
       @include grid-column($columns: 6);
+    }
+
+    .title {
+      @include grid-column($columns: 6, $collapse: true);
+
     }
   }
 }

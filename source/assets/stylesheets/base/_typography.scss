@@ -32,6 +32,7 @@ a {
   &:focus,
   &:hover {
     color: darken($action-color, 15%);
+    text-decoration: underline;
   }
 
   &:active,
