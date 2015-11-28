@@ -1,0 +1,149 @@
+// Example Styles
+// =======================================
+
+.header {
+  @include grid-row($collapse: true);
+  margin-bottom: 1em;
+
+  .title {
+    background-color: $base-font-color;
+    color: white;
+    font-size: 6.25em;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    text-align: center;
+
+    small {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.75em;
+    }
+
+    a {
+      color: white;
+
+      &.contact {
+        margin: 0 0.75em;
+      }
+    }
+  }
+
+  .description li {
+    border-bottom: $base-border;
+    padding: $small-spacing;
+  }
+
+  @media #{$small} {
+    display: flex;
+
+    .description {
+      @include grid-column($columns: 6);
+    }
+
+    .title {
+      @include grid-column($columns: 6, $collapse: true);
+
+    }
+  }
+}
+
+.example {
+
+  .section-title {
+    background-color: whitesmoke;
+    line-height: 4;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .row {
+    @include grid-row;
+    background-color: $medium-gray;
+    margin-bottom: 1em;
+    padding-bottom: em(2);
+    padding-top: em(2);
+  }
+
+  .content {
+    background-color: $light-gray;
+    display: block;
+    line-height: 6em;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  [class^="col-"] {
+    @include grid-column($columns: 12);
+    border-left: $base-border;
+    border-right: $base-border;
+  }
+
+  .col-2 {
+
+    @media #{$small} {
+      @include grid-column($columns: 6);
+    }
+  }
+
+  .col-2-collapse {
+
+    @media #{$small} {
+      @include grid-column($columns: 6, $collapse: 6);
+    }
+  }
+
+  .col-3 {
+
+    @media #{$small} {
+      @include grid-column($columns: 4);
+    }
+  }
+
+  .col-4 {
+
+    @media #{$small} {
+      @include grid-column($columns: 3);
+    }
+  }
+
+  .col-6 {
+
+    @media #{$small} {
+      @include grid-column($columns: 2);
+    }
+  }
+
+  .col-12 {
+
+    @media #{$small} {
+      @include grid-column($columns: 1);
+    }
+  }
+
+  .col-2-center {
+
+    @media #{$small} {
+      @include grid-column($columns: 6, $center: true);
+    }
+  }
+
+  .col-4-center {
+
+    @media #{$small} {
+      @include grid-column($columns: 6, $center: true);
+    }
+  }
+}
+
+@media #{$screen} {}
+
+@media #{$small} {}
+
+@media #{$medium} {}
+
+@media #{$large} {}
+
+@media #{$landscape} {}
+
+@media #{$portrait} {}

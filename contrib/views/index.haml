@@ -1,0 +1,129 @@
+!!!
+%html
+  %head
+    %meta{ charset: "utf-8" }
+    %meta{ content: "IE=edge,chrome=1", http: { equiv: "X-UA-Compatible" } }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
+    %meta{ content: "noindex, nofollow", name: "robots" }
+    %title
+      "Cask"
+    %link{ href: "styles.css", rel: "stylesheet", type: "text/css" }
+
+  %body
+    %header.header
+      %h1.title
+        Cask
+        %small
+          A proposed alternative grid for
+          %br
+          %a{ href: "http://bourbon.io/" }
+            Bourbon
+          &
+          %a{ href: "http://bitters.bourbon.io/" }
+            Bitters
+        %small
+          %a.contact{ href: "https://github.com/thoughtbot/cask" }
+            github
+          %a.contact{ href: "https://twitter.com/WHMII" }
+            @whmii
+      %ul.description
+        %li
+          Cask is only ~84 lines of code so its basically fully knowable
+        %li
+          Because of its simplicity there is virtually no “where is this coming from!?”
+        %li
+          The syntax for media queries is greatly simplified
+        %li
+          There is no use of relative positioning or nth child selectors
+        %li
+          Cask is built around defining as few attributes as possible
+        %li
+          It’s easy to use in conjunction with flex-box
+    %main.example
+      %section
+        %h1.section-title
+          Some Examples
+        .row
+          .col-1
+            .content
+              %code
+                @include grid-column($columns: 12);
+        .row
+          - 2.times do
+            .col-2
+              .content
+                %code
+                  @include grid-column($columns: 6);
+        .row
+          - 3.times do
+            .col-3
+              .content
+                %code
+                  $columns: 4
+        .row
+          - 4.times do
+            .col-4
+              .content
+                %code
+                  3
+        .row
+          - 6.times do
+            .col-6
+              .content
+                %code
+                  2
+        .row
+          - 12.times do
+            .col-12
+              .content
+                %code
+                  1
+      %section
+        %h1.section-title
+          Centered Grids
+        .row
+          .col-2-center
+            .content
+              %code
+                @include grid-column($columns: 6, $center: true);
+      %section
+        %h1.section-title
+          Nested Grids
+        .row
+          .col-2
+            .content
+              %code
+                $columns: 6
+          .col-2-collapse
+            .col-2
+              .content
+                %code
+                  $columns: 6
+            .col-2-collapse
+              .col-2
+                .content
+                  %code
+                    6
+              .col-2
+                .content
+                  %code
+                    6
+    %footer
+      %h1
+        Here’s the thing… There is no spoon.
+      %p
+        Just because your using a grid framework doesn’t mean you have to use it
+        for everything. If you need a variable, use a variable. If you need a
+        calculation use a function. If you need a bunch more, then use a mixin.
+        Cask is made to be usable with as little implementation as possible.
+        Here’s an example.
+      %pre
+        %code
+          :preserve
+            .foo {
+              width: grid-calc(4);
+              // ↑ Makes this 4 columns wide!
+              padding: 0 $column-gutter;
+              // ↑ Now it’s got padding just like a row + column!!
+            }
+
