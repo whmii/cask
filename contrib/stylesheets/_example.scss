@@ -37,13 +37,12 @@
   @media #{$small} {
     display: flex;
 
-    .description {
+    .title {
       @include grid-column($columns: 6);
     }
 
-    .title {
-      @include grid-column($columns: 6, $collapse: true);
-
+    .description {
+      @include grid-column($columns: 6);
     }
   }
 }
@@ -58,7 +57,7 @@
   }
 
   .row {
-    @include grid-row;
+    @include grid-row($collapse: true);
     background-color: $medium-gray;
     margin-bottom: 1em;
     padding-bottom: em(2);
@@ -125,6 +124,13 @@
 
     @media #{$small} {
       @include grid-column($columns: 6, $center: true);
+    }
+  }
+
+  .col-2-center {
+
+    @media #{$small} {
+      @include grid-column($columns: 6, $center: true, $collapse: true);
     }
   }
 

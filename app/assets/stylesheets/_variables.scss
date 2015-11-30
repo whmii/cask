@@ -15,8 +15,8 @@ $opposite-direction: right;
   $opposite-direction: left;
 }
 
-$row-width: em(1280);
-$column-gutter: em(20);
+$row-width: 80rem;
+$column-gutter: 1.875rem;
 $total-columns: 12;
 
 $column-width: ($row-width / $total-columns);
