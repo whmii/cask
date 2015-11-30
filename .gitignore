@@ -1,0 +1,9 @@
+_site
+.DS_store
+.sass-cache
+*gem
+*swp
+Gemfile.lock
+contrib/*.css
+contrib/*.html
+node_modules
