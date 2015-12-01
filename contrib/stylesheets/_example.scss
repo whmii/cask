@@ -2,7 +2,7 @@
 // =======================================
 
 .header {
-  @include grid-row($collapse: true);
+  @include grid-row();
   margin-bottom: 1em;
 
   .title {
@@ -50,6 +50,7 @@
 .example {
 
   .section-title {
+    @include grid-row($max-width: null);
     background-color: whitesmoke;
     line-height: 4;
     text-align: center;
@@ -57,7 +58,7 @@
   }
 
   .row {
-    @include grid-row($collapse: true);
+    @include grid-row();
     background-color: $medium-gray;
     margin-bottom: 1em;
     padding-bottom: em(2);
