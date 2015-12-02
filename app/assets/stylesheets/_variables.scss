@@ -1,29 +1,23 @@
-// Project Settings
+// GridA Settings
 // ============================================================
 
 // ========= Grid Variables =========
 
-$default-float: left;
 $text-direction: ltr;
-$opposite-direction: right;
 
 @if $text-direction == ltr {
   $default-float: left;
   $opposite-direction: right;
-} @else {
+} @else if $text-direction == rtl {
   $default-float: right;
   $opposite-direction: left;
 }
 
 $row-width: 80rem;
-$column-gutter: 1.5rem;
+$column-gutter: 1.25rem;
 $total-columns: 12;
 
-$column-width: ($row-width / $total-columns);
-
 // ========= Media Queries =========
-
-// Media Queries
 
 $small-screen: 768px !default;
 $medium-screen: 1280px !default;

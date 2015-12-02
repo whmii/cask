@@ -4,10 +4,10 @@
     $center: true,
     $max-width: $row-width
   ) {
-  @include grid-column($collapse: true, $center: $center);
-  @include clearfix;
 
   $max-width: if($max-width, $max-width, none);
 
+  @include grid-column($collapse: true, $center: $center);
+  @include clearfix;
   max-width: $max-width;
 }
