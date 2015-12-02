@@ -108,22 +108,3 @@
                 .content
                   %code
                     6
-    %footer
-      %h1
-        Here’s the thing… There is no spoon.
-      %p
-        Just because your using a grid framework doesn’t mean you have to use it
-        for everything. If you need a variable, use a variable. If you need a
-        calculation use a function. If you need a bunch more, then use a mixin.
-        Cask is made to be usable with as little implementation as possible.
-        Here’s an example.
-      %pre
-        %code
-          :preserve
-            .foo {
-              width: grid-calc(4);
-              // ↑ Makes this 4 columns wide!
-              padding: 0 $column-gutter;
-              // ↑ Now it’s got padding just like a row + column!!
-            }
-
