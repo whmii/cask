@@ -1,10 +1,11 @@
 // Specifies the number of columns an element should span.
-
 @mixin grid-column(
     $columns: false,
     $collapse: false,
     $center: false
   ) {
+
+  width: grid-calc($columns, $collapse);
 
   @if $center {
     margin-#{$default-float}: auto;
@@ -17,14 +18,4 @@
     float: $default-float;
     margin-#{$default-float}: $column-gutter;
   }
-
-  $column-ratio: if($columns, ($columns / $total-columns), 1);
-
-  @if $collapse {
-    $column-gutter-affordance: #{-($column-gutter) + ($column-gutter * $column-ratio)};
-  } @else {
-    $column-gutter-affordance: $column-gutter + ($column-gutter * $column-ratio);
-  }
-
-  width: calc(#{percentage($column-ratio)} - #{$column-gutter-affordance});
 }

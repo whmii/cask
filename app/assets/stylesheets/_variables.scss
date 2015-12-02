@@ -6,11 +6,11 @@
 $text-direction: ltr;
 
 @if $text-direction == ltr {
-  $default-float: left;
-  $opposite-direction: right;
+  $default-float: left !global;
+  $opposite-direction: right !global;
 } @else if $text-direction == rtl {
-  $default-float: right;
-  $opposite-direction: left;
+  $default-float: right !global;
+  $opposite-direction: left !global;
 }
 
 $row-width: 80rem;

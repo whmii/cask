@@ -10,9 +10,3 @@
 $row-width: 64rem !default;
 $column-gutter: 1.875rem !default;
 $total-columns: 12 !default;
-
-// Grid-Calc Function
-
-@function grid-calc($colNumber, $totalColumns: $total-columns) {
-  @return percentage($colNumber / $totalColumns);
-}
