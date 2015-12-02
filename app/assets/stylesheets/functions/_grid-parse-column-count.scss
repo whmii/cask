@@ -1,0 +1,11 @@
+// Parses the first argument of grid-column()
+
+@function grid-parse-column-count($span: $span) {
+  @if length($span) == 3 {
+    $total-columns: nth($span, 3);
+    @return $total-columns;
+  } @else if length($span) == 2 {
+    $total-columns: nth($span, 2);
+    @return $total-columns;
+  }
+}

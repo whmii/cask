@@ -2,7 +2,7 @@
 
 @mixin grid-row(
     $center: true,
-    $max-width: $row-width
+    $max-width: $grid-row-width
   ) {
 
   $max-width: if($max-width, $max-width, none);

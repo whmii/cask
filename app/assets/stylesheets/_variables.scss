@@ -1,4 +1,4 @@
-// GridA Settings
+// Grid Settings
 // ============================================================
 
 // ========= Grid Variables =========
@@ -13,9 +13,9 @@ $text-direction: ltr;
   $opposite-direction: left !global;
 }
 
-$row-width: 80rem;
-$column-gutter: 1.25rem;
-$total-columns: 12;
+$grid-row-width: 80rem !default;
+$grid-gutter: 1.25rem !default;
+$total-columns: 12 !default;
 
 // ========= Media Queries =========
 

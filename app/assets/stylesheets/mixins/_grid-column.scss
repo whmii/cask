@@ -1,4 +1,5 @@
 // Specifies the number of columns an element should span.
+
 @mixin grid-column(
     $columns: false,
     $collapse: false,
@@ -13,9 +14,9 @@
     float: none;
   } @else if $collapse and not $center {
     margin-#{$default-float}: 0;
-    margin-#{$opposite-direction}: -($column-gutter);
+    margin-#{$opposite-direction}: -($grid-gutter);
   } @else {
     float: $default-float;
-    margin-#{$default-float}: $column-gutter;
+    margin-#{$default-float}: $grid-gutter;
   }
 }

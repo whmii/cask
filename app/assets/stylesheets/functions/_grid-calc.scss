@@ -1,12 +1,12 @@
-// Parses the first argument of span-columns()
+// Calculates the width of a column for grid-column()
+
 @function grid-calc($columns, $collapse) {
   $column-ratio: if($columns, ($columns / $total-columns), 1);
 
-  $column-gutter-affordance:
+  $grid-gutter-affordance:
     if($collapse,
-      -($column-gutter) + ($column-gutter * $column-ratio),
-      $column-gutter + ($column-gutter * $column-ratio));
-  $grid-calc-width: calc(#{percentage($column-ratio)} - #{$column-gutter-affordance});
+      -($grid-gutter) + ($grid-gutter * $column-ratio),
+      $grid-gutter + ($grid-gutter * $column-ratio));
+  $grid-calc-width: calc(#{percentage($column-ratio)} - #{$grid-gutter-affordance});
   @return $grid-calc-width;
 }
-
