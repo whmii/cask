@@ -7,5 +7,5 @@
   ) {
   @include grid-gutter($collapse: $collapse, $center: $center);
   float: if($center, none, $default-float);
-  width: grid-calc($columns, $collapse);
+  width: calc(#{grid-calc($columns, $collapse)});
 }

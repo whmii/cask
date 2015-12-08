@@ -88,6 +88,15 @@
                 @include grid-column($columns: 6, $center: true);
       %section
         %h1.section-title
+          Push Grids
+        .row
+          .col-2-push
+            .content
+              %code
+                @include grid-column($columns: 5);
+                @include grid-push($push: 2);
+      %section
+        %h1.section-title
           Collapsed & Nested Grids
         .row
           .col-2
