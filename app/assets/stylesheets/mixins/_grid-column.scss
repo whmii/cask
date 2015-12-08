@@ -5,18 +5,7 @@
     $collapse: false,
     $center: false
   ) {
-
+  @include grid-gutter($collapse: $collapse, $center: $center);
+  float: if($center, none, $default-float);
   width: grid-calc($columns, $collapse);
-
-  @if $center {
-    margin-#{$default-float}: auto;
-    margin-#{$opposite-direction}: auto;
-    float: none;
-  } @else if $collapse and not $center {
-    margin-#{$default-float}: 0;
-    margin-#{$opposite-direction}: -($grid-gutter);
-  } @else {
-    float: $default-float;
-    margin-#{$default-float}: $grid-gutter;
-  }
 }

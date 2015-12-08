@@ -2,7 +2,6 @@
 
 @function grid-calc($columns, $collapse) {
   $column-ratio: if($columns, ($columns / $total-columns), 1);
-
   $grid-gutter-affordance:
     if($collapse,
       -($grid-gutter) + ($grid-gutter * $column-ratio),

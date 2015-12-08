@@ -74,7 +74,6 @@
   }
 
   [class^="col-"] {
-    @include grid-column($columns: 12);
     border-left: $base-border;
     border-right: $base-border;
   }
