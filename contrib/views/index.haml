@@ -93,27 +93,51 @@
           .col-2-push
             .content
               %code
-                @include grid-column($columns: 5);
                 @include grid-push($push: 2);
+      %section
+        %h1.section-title
+          Shift Grids (reordering)
+        .row
+          .col-2-shift-1
+            .content
+              %code
+                [first] @include grid-shift($shift: 4);
+          .col-2-shift-2
+            .content
+              %code
+                [second] @include grid-shift($shift: -4);
       %section
         %h1.section-title
           Collapsed & Nested Grids
         .row
+          .content-label
           .col-2
+            .content-label
+              6
             .content
               %code
                 $columns: 6
           .col-2-collapse
+            .content-label
+              6
             .col-2
+              .content-label
+                6
               .content
                 %code
                   $columns: 6
             .col-2-collapse
+              .content-label
+                6
               .col-2
+                .content-label
+                  6
                 .content
                   %code
                     6
               .col-2
+                .content-label
+                  6
                 .content
                   %code
                     6
