@@ -6,11 +6,11 @@
   $push: if($push == 0, false, $push);
 
   @if $push {
-    $grid-gutter-affordance: $grid-gutter * $push;
-    $margin-value: calc(#{unquote(grid-calc($push))} + #{$grid-gutter-affordance});
+    $_grid-gutter-affordance: $grid-gutter * $push;
+    $_margin-value: calc(#{unquote(grid-calc($push))} + #{$_grid-gutter-affordance});
   } @else {
-    $margin-value: $grid-gutter;
+    $_margin-value: $grid-gutter;
   }
 
-  margin-#{$default-float}: $margin-value;
+  margin-#{$default-float}: $_margin-value;
 }

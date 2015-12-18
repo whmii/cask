@@ -5,9 +5,9 @@
     $max-width: $grid-row-width
   ) {
 
-  $max-width: if($max-width, $max-width, none);
+  $_max-width: if($max-width, $max-width, none);
 
   @include grid-column($collapse: true, $center: $center);
   @include clearfix;
-  max-width: $max-width;
+  max-width: $_max-width;
 }
