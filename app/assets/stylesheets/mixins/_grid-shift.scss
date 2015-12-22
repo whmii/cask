@@ -3,7 +3,9 @@
 @mixin grid-shift(
     $shift: false
   ) {
-  $shift: if($shift == 0, false, $shift);
+  @if $shift == 0 {
+    @error grid-is-zero-error(grid-shift);
+  }
 
   @if $shift {
     $_shift-value: calc(#{unquote(grid-calc($shift))} + #{$grid-gutter});

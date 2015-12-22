@@ -1,11 +1,15 @@
-// Calculates the width of a column for grid-column()
+// Calculates the width of a column for grid-column() and other mixins
 
 @function grid-calc($columns, $collapse:false) {
-  $_column-ratio: if($columns, ($columns / $total-columns), 1);
-  $_grid-gutter-affordance:
-    if($collapse,
-      -($grid-gutter) + ($grid-gutter * $_column-ratio),
-      $grid-gutter + ($grid-gutter * $_column-ratio));
-  $_grid-calc-width: unquote("#{percentage($_column-ratio)} - #{$_grid-gutter-affordance}");
-  @return $_grid-calc-width;
+  $_column-ratio: grid-column-ratio($columns);
+
+  $_grid-gutter-affordance: null;
+
+  @if $collapse {
+    $_grid-gutter-affordance: (-$grid-gutter) + ($grid-gutter * $_column-ratio);
+  } @else {
+    $_grid-gutter-affordance: $grid-gutter + ($grid-gutter * $_column-ratio);
+  }
+
+  @return unquote("#{percentage($_column-ratio)} - #{$_grid-gutter-affordance}");
 }

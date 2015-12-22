@@ -1,4 +1,4 @@
-// Specifies what a columns margins should be.
+// Specifies what a column's margins should be.
 
 @mixin grid-gutter(
     $collapse: false,
@@ -12,5 +12,6 @@
     margin-#{$opposite-direction}: -($grid-gutter);
   } @else {
     margin-#{$default-float}: $grid-gutter;
+    margin-#{$opposite-direction}: 0;
   }
 }

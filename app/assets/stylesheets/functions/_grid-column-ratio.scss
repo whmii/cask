@@ -1,0 +1,9 @@
+// Calculates the ratio of a given column over its container.
+
+@function grid-column-ratio($columns) {
+  @if $columns {
+    @return $columns / $grid-total-columns;
+  } @else {
+    @return 1;
+  }
+}
