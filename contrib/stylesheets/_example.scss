@@ -98,77 +98,63 @@
     border-right: $base-border;
   }
 
-  .col-1 {
+  .col-12 {
 
     @media #{$small} {
       @include grid-column($columns: 12);
     }
   }
 
-  .col-2 {
+  .col-6 {
 
     @media #{$small} {
       @include grid-column($columns: 6);
     }
   }
 
-  .col-2-collapse {
+  .col-6-center {
+
+    @media #{$small} {
+      @include grid-column($columns: 6, $center: true);
+    }
+  }
+
+  .col-6-collapse {
 
     @media #{$small} {
       @include grid-column($columns: 6, $collapse: true);
     }
   }
 
-  .col-3 {
+  .col-4 {
 
     @media #{$small} {
       @include grid-column($columns: 4);
     }
   }
 
-  .col-4 {
+  .col-3 {
 
     @media #{$small} {
       @include grid-column($columns: 3);
     }
   }
 
-  .col-6 {
+  .col-2 {
 
     @media #{$small} {
       @include grid-column($columns: 2);
     }
   }
 
-  .col-12 {
+  .col-1 {
 
     @media #{$small} {
       @include grid-column($columns: 1);
     }
   }
 
-  .col-2-center {
-
-    @media #{$small} {
-      @include grid-column($columns: 6, $center: true);
-    }
-  }
-
-  .col-2-center-collapse {
-
-    @media #{$small} {
-      @include grid-column($columns: 6, $center: true, $collapse: true);
-    }
-  }
-
-  .col-4-center {
-
-    @media #{$small} {
-      @include grid-column($columns: 6, $center: true);
-    }
-  }
-
-  .col-2-push {
+  .col-5-push {
 
     @media #{$small} {
       @include grid-column($columns: 5);
@@ -176,7 +162,7 @@
     }
   }
 
-  .col-2-shift-1 {
+  .col-4-shift-1 {
 
     @media #{$small} {
       @include grid-column($columns: 4);
@@ -184,12 +170,20 @@
     }
   }
 
-  .col-2-shift-2 {
+  .col-4-shift-2 {
 
     @media #{$small} {
       @include grid-column($columns: 4);
       @include grid-shift($shift: -4);
     }
+  }
+
+  .col-2-of-5 {
+    @include grid-column($columns: 2 of 5);
+  }
+
+  .col-3-of-5 {
+    @include grid-column($columns: 3 of 5);
   }
 }
 

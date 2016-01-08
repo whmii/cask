@@ -44,37 +44,37 @@
         %h1.section-title
           Some Examples
         .row
-          .col-1
+          .col-12
             .content
               %code
                 @include grid-column($columns: 12);
         .row
           - 2.times do
-            .col-2
+            .col-6
               .content
                 %code
                   @include grid-column($columns: 6);
         .row
           - 3.times do
-            .col-3
+            .col-4
               .content
                 %code
                   $columns: 4
         .row
           - 4.times do
-            .col-4
+            .col-3
               .content
                 %code
                   3
         .row
           - 6.times do
-            .col-6
+            .col-2
               .content
                 %code
                   2
         .row
           - 12.times do
-            .col-12
+            .col-1
               .content
                 %code
                   1
@@ -82,7 +82,7 @@
         %h1.section-title
           Centered Grids
         .row
-          .col-2-center
+          .col-6-center
             .content
               %code
                 @include grid-column($columns: 6, $center: true);
@@ -90,7 +90,7 @@
         %h1.section-title
           Push Grids
         .row
-          .col-2-push
+          .col-5-push
             .content
               %code
                 @include grid-push($push: 2);
@@ -98,11 +98,11 @@
         %h1.section-title
           Shift Grids (reordering)
         .row
-          .col-2-shift-1
+          .col-4-shift-1
             .content
               %code
                 [first] @include grid-shift($shift: 4);
-          .col-2-shift-2
+          .col-4-shift-2
             .content
               %code
                 [second] @include grid-shift($shift: -4);
@@ -111,33 +111,45 @@
           Collapsed & Nested Grids
         .row
           .content-label
-          .col-2
+          .col-6
             .content-label
               6
             .content
               %code
                 $columns: 6
-          .col-2-collapse
+          .col-6-collapse
             .content-label
               6
-            .col-2
+            .col-6
               .content-label
                 6
               .content
                 %code
                   $columns: 6
-            .col-2-collapse
+            .col-6-collapse
               .content-label
                 6
-              .col-2
+              .col-6
                 .content-label
                   6
                 .content
                   %code
                     6
-              .col-2
+              .col-6
                 .content-label
                   6
                 .content
                   %code
                     6
+      %section
+        %h1.section-title
+          Custom sub-grids
+        .row
+          .col-2-of-5
+            .content
+              %code
+                @include grid-column($columns:2 of 5);
+          .col-3-of-5
+            .content
+              %code
+                @include grid-column($columns:3 of 5);
