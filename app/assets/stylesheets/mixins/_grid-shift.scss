@@ -1,0 +1,16 @@
+// Shift columns and reorder them within their container.
+
+@mixin grid-shift(
+    $shift: false
+  ) {
+  @if $shift == 0 {
+    @error grid-is-zero-error(grid-shift);
+  }
+
+  @if $shift {
+    $_shift-value: calc(#{unquote(grid-calc($shift))} + #{$grid-gutter});
+    #{$default-float}: $_shift-value;
+  }
+
+  position: relative;
+}

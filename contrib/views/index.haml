@@ -1,0 +1,155 @@
+!!!
+%html
+  %head
+    %meta{ charset: "utf-8" }
+    %meta{ content: "IE=edge,chrome=1", http: { equiv: "X-UA-Compatible" } }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
+    %meta{ content: "noindex, nofollow", name: "robots" }
+    %title
+      "Cask"
+    %link{ href: "styles.css", rel: "stylesheet", type: "text/css" }
+
+  %body
+    %header.header
+      %h1.title
+        Cask
+        %small
+          A proposed alternative grid for
+          %br
+          %a{ href: "http://bourbon.io/" }
+            Bourbon
+          &
+          %a{ href: "http://bitters.bourbon.io/" }
+            Bitters
+        %small
+          %a.contact{ href: "https://github.com/thoughtbot/cask" }
+            github
+          %a.contact{ href: "https://twitter.com/WHMII" }
+            @whmii
+      %ul.description
+        %li
+          Cask is only ~84 lines of code so its basically fully knowable
+        %li
+          Because of its simplicity there is virtually no “where is this coming from!?”
+        %li
+          The syntax for media queries is greatly simplified
+        %li
+          There is no use of relative positioning or nth child selectors
+        %li
+          Cask is built around defining as few attributes as possible
+        %li
+          It’s easy to use in conjunction with flex-box
+    %main.example
+      %section
+        %h1.section-title
+          Some Examples
+        .row
+          .col-12
+            .content
+              %code
+                @include grid-column($columns: 12);
+        .row
+          - 2.times do
+            .col-6
+              .content
+                %code
+                  @include grid-column($columns: 6);
+        .row
+          - 3.times do
+            .col-4
+              .content
+                %code
+                  $columns: 4
+        .row
+          - 4.times do
+            .col-3
+              .content
+                %code
+                  3
+        .row
+          - 6.times do
+            .col-2
+              .content
+                %code
+                  2
+        .row
+          - 12.times do
+            .col-1
+              .content
+                %code
+                  1
+      %section
+        %h1.section-title
+          Centered Grids
+        .row
+          .col-6-center
+            .content
+              %code
+                @include grid-column($columns: 6, $center: true);
+      %section
+        %h1.section-title
+          Push Grids
+        .row
+          .col-5-push
+            .content
+              %code
+                @include grid-push($push: 2);
+      %section
+        %h1.section-title
+          Shift Grids (reordering)
+        .row
+          .col-4-shift-1
+            .content
+              %code
+                [first] @include grid-shift($shift: 4);
+          .col-4-shift-2
+            .content
+              %code
+                [second] @include grid-shift($shift: -4);
+      %section
+        %h1.section-title
+          Collapsed & Nested Grids
+        .row
+          .content-label
+          .col-6
+            .content-label
+              6
+            .content
+              %code
+                $columns: 6
+          .col-6-collapse
+            .content-label
+              6
+            .col-6
+              .content-label
+                6
+              .content
+                %code
+                  $columns: 6
+            .col-6-collapse
+              .content-label
+                6
+              .col-6
+                .content-label
+                  6
+                .content
+                  %code
+                    6
+              .col-6
+                .content-label
+                  6
+                .content
+                  %code
+                    6
+      %section
+        %h1.section-title
+          Custom sub-grids
+        .row
+          .col-2-of-5
+            .content
+              %code
+                @include grid-column($columns:2 of 5);
+          .col-3-of-5
+            .content
+              %code
+                @include grid-column($columns:3 of 5);

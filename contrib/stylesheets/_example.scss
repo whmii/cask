@@ -1,0 +1,200 @@
+// Example Styles
+// =======================================
+
+.header {
+  @include grid-row();
+  margin-bottom: 1em;
+
+  .title {
+    background-color: $base-font-color;
+    color: white;
+    font-size: 6.25rem;
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+    text-align: center;
+
+    small {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: white;
+
+      &.contact {
+        margin: 0 0.75em;
+      }
+    }
+  }
+
+  .description li {
+    border-bottom: $base-border;
+    padding: $small-spacing;
+  }
+
+  @media #{$small} {
+    display: flex;
+
+    .title {
+      @include grid-column($columns: 6);
+    }
+
+    .description {
+      @include grid-column($columns: 6);
+    }
+  }
+}
+
+.example {
+
+  .section-title {
+    @include grid-row($max-width: null);
+    background-color: whitesmoke;
+    line-height: 4;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .row {
+    @include grid-row();
+    background-color: $medium-gray;
+    margin-bottom: 1em;
+    padding-bottom: em(2);
+    padding-top: em(2);
+  }
+
+  .content {
+    background-color: $light-gray;
+    display: block;
+    line-height: 6em;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .content-label {
+    color: $base-background-color;
+    display: block;
+    font-family: $monospace-font-family;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5em;
+    text-align: center;
+    white-space: nowrap;
+
+    &::after {
+      border-color: $light-gray;
+      border-style: solid;
+      border-width: 1px 1px 0;
+      content: "";
+      display: block;
+      height: 1.5em;
+      margin: 0 3px;
+    }
+  }
+
+  [class^="col-"] {
+    border-left: $base-border;
+    border-right: $base-border;
+  }
+
+  .col-12 {
+
+    @media #{$small} {
+      @include grid-column($columns: 12);
+    }
+  }
+
+  .col-6 {
+
+    @media #{$small} {
+      @include grid-column($columns: 6);
+    }
+  }
+
+  .col-6-center {
+
+    @media #{$small} {
+      @include grid-column($columns: 6, $center: true);
+    }
+  }
+
+  .col-6-collapse {
+
+    @media #{$small} {
+      @include grid-column($columns: 6, $collapse: true);
+    }
+  }
+
+  .col-4 {
+
+    @media #{$small} {
+      @include grid-column($columns: 4);
+    }
+  }
+
+  .col-3 {
+
+    @media #{$small} {
+      @include grid-column($columns: 3);
+    }
+  }
+
+  .col-2 {
+
+    @media #{$small} {
+      @include grid-column($columns: 2);
+    }
+  }
+
+  .col-1 {
+
+    @media #{$small} {
+      @include grid-column($columns: 1);
+    }
+  }
+
+  .col-5-push {
+
+    @media #{$small} {
+      @include grid-column($columns: 5);
+      @include grid-push($push: 2);
+    }
+  }
+
+  .col-4-shift-1 {
+
+    @media #{$small} {
+      @include grid-column($columns: 4);
+      @include grid-shift($shift: 4);
+    }
+  }
+
+  .col-4-shift-2 {
+
+    @media #{$small} {
+      @include grid-column($columns: 4);
+      @include grid-shift($shift: -4);
+    }
+  }
+
+  .col-2-of-5 {
+    @include grid-column($columns: 2 of 5);
+  }
+
+  .col-3-of-5 {
+    @include grid-column($columns: 3 of 5);
+  }
+}
+
+@media #{$screen} {}
+
+@media #{$small} {}
+
+@media #{$medium} {}
+
+@media #{$large} {}
+
+@media #{$landscape} {}
+
+@media #{$portrait} {}

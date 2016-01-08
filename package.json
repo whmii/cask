@@ -1,0 +1,36 @@
+{
+  "name": "Cask",
+  "version": "0.2.0",
+  "description": "A simple relible float based grid system",
+  "main": "Gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whmii/cask.git"
+  },
+  "keywords": [
+    "bourbon",
+    "css",
+    "sass",
+    "scss",
+    "grid",
+    "scaffold"
+  ],
+  "author": {
+    "name": "Will H McMahan",
+    "url": "http://mcmahan.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whmii/cask/issues"
+  },
+  "homepage": "http://whmii.github.com/cask",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-connect": "^2.2.0",
+    "gulp-haml": "^0.1.6",
+    "gulp-ruby-haml": "0.0.5",
+    "gulp-sass": "^2.0.2",
+    "node-bourbon": "^4.2.3"
+  }
+}

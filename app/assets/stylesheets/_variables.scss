@@ -1,29 +1,23 @@
-// Project Settings
+// Grid Settings
 // ============================================================
 
 // ========= Grid Variables =========
 
-$default-float: left;
 $text-direction: ltr;
-$opposite-direction: right;
 
 @if $text-direction == ltr {
-  $default-float: left;
-  $opposite-direction: right;
-} @else {
-  $default-float: right;
-  $opposite-direction: left;
+  $default-float: left !global;
+  $opposite-direction: right !global;
+} @else if $text-direction == rtl {
+  $default-float: right !global;
+  $opposite-direction: left !global;
 }
 
-$row-width: em(1280);
-$column-gutter: em(20);
-$total-columns: 12;
-
-$column-width: ($row-width / $total-columns);
+$grid-row-width: 80rem !default;
+$grid-gutter: 1.25rem !default;
+$grid-total-columns: 12 !default;
 
 // ========= Media Queries =========
-
-// Media Queries
 
 $small-screen: 768px !default;
 $medium-screen: 1280px !default;
