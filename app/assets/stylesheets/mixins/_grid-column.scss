@@ -5,13 +5,13 @@
     $collapse: false,
     $center: false
   ) {
+  @include grid-gutter($collapse: $collapse, $center: $center);
+
   @if $center {
-    $_float: none;
+    float: none;
   } @else {
-    $_float: $default-float;
+    float: $default-float;
   }
 
-  @include grid-gutter($collapse: $collapse, $center: $center);
-  float: $_float;
   width: calc(#{grid-calc($columns, $collapse)});
 }
