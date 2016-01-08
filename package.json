@@ -1,11 +1,11 @@
 {
   "name": "Cask",
-  "version": "0.1.0",
-  "description": "A proposed alternative grid for Bourbon and Bitters",
+  "version": "0.2.0",
+  "description": "A simple relible float based grid system",
   "main": "Gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thoughtbot/cask.git"
+    "url": "https://github.com/whmii/cask.git"
   },
   "keywords": [
     "bourbon",
@@ -16,14 +16,14 @@
     "scaffold"
   ],
   "author": {
-    "name": "thoughtbot",
-    "url": "http://thoughtbot.com"
+    "name": "Will H McMahan",
+    "url": "http://mcmahan.me"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thoughtbot/cask/issues"
+    "url": "https://github.com/whmii/cask/issues"
   },
-  "homepage": "http://cask.bourbon.io",
+  "homepage": "http://whmii.github.com/cask",
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.1",
