@@ -1,6 +1,6 @@
 # Cask
 
-A proposed alternative grid for Bourbon and Bitters
+A simple reliable float based grid system, built with calc.
 
 ## Todo
 - [x] grid columns
