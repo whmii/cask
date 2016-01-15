@@ -1,4 +1,5 @@
 // Parses the total number of columns from `$columns`
+
 @function grid-parse-column-count($span) {
   @if length($span) == 3 {
     $_total-columns: nth($span, 3);

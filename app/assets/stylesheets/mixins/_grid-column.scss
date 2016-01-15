@@ -6,7 +6,6 @@
     $center: false
   ) {
   @include grid-gutter($collapse: $collapse, $center: $center);
-
   @if $center {
     float: none;
   } @else {
