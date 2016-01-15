@@ -179,11 +179,15 @@
   }
 
   .col-2-of-5 {
-    @include grid-column($columns: 2 of 5);
+    @media #{$small} {
+      @include grid-column($columns: 2 of 5);
+    }
   }
 
   .col-3-of-5 {
-    @include grid-column($columns: 3 of 5);
+    @media #{$small} {
+      @include grid-column($columns: 3 of 5);
+    }
   }
 }
 
