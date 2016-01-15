@@ -17,4 +17,8 @@
       display: table;
     }
   }
+
+  @if $clear != top and $clear != bottom and $clear != both {
+    @error "`$clear` was #{$clear} but should be `top`, `bottom`, or `both`";
+  }
 }
