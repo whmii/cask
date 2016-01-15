@@ -2,7 +2,6 @@ var gulp = require("gulp"),
   autoprefix = require("gulp-autoprefixer"),
   sass = require("gulp-sass"),
   connect = require("gulp-connect"),
-  bourbon = require("node-bourbon").includePaths,
   haml = require('gulp-ruby-haml');;
 
 var paths = {
@@ -14,7 +13,7 @@ var paths = {
 gulp.task("sass", function () {
   return gulp.src(paths.scss)
     .pipe(sass({
-      includePaths: ["/styles"].concat(bourbon)
+      includePaths: ["/styles"]
     }))
     .pipe(autoprefix("last 2 versions"))
     .pipe(gulp.dest("./contrib"))
