@@ -5,7 +5,7 @@
     $max-width: $grid-row-width
   ) {
 
-  @include clearfix;
+  @include grid-clearfix;
   @include grid-column($collapse: true, $center: $center);
   max-width: $max-width;
 }
