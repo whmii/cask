@@ -3,13 +3,14 @@
 @mixin grid-push(
     $push: false
   ) {
+  @include grid-is-zero-error(grid-push, $push);
+
   @if $push {
     $_grid-gutter-affordance: $grid-gutter * $push;
     $_margin-value: calc(#{unquote(grid-calc($push))} + #{$_grid-gutter-affordance});
+    margin-#{$default-float}: $_margin-value;
   } @else {
     $_margin-value: $grid-gutter;
+    margin-#{$default-float}: $_margin-value;
   }
-
-  @include grid-is-zero-error(grid-push, $push);
-  margin-#{$default-float}: $_margin-value;
 }
