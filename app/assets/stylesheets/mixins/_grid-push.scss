@@ -1,10 +1,7 @@
 // Push columns away from their container.
 
-@mixin grid-push(
-    $push: false
-  ) {
+@mixin grid-push($push: false) {
   @include grid-is-zero-error(grid-push, $push);
-
   @if $push {
     $_grid-gutter-affordance: $grid-gutter * $push;
     $_margin-value: calc(#{unquote(grid-calc($push))} + #{$_grid-gutter-affordance});

@@ -1,6 +1,9 @@
 // Calculates the width of a column for grid-column() and other mixins
 
-@function grid-calc($columns, $collapse:false) {
+@function grid-calc(
+    $columns,
+    $collapse: false
+  ) {
   $_column-ratio: grid-column-ratio($columns);
 
   @if $collapse {
