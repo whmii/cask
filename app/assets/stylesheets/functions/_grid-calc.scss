@@ -5,12 +5,13 @@
     $collapse: false
   ) {
   $_column-ratio: grid-column-ratio($columns);
+  $_gutter: grid-settings(gutter);
 
   @if $collapse {
-    $_grid-gutter-affordance: (-$grid-gutter) + ($grid-gutter * $_column-ratio);
-    @return unquote("#{percentage($_column-ratio)} - #{$_grid-gutter-affordance}");
+    $_gutter-affordance: (-$_gutter) + ($_gutter * $_column-ratio);
+    @return unquote("#{percentage($_column-ratio)} - #{$_gutter-affordance}");
   } @else {
-    $_grid-gutter-affordance: $grid-gutter + ($grid-gutter * $_column-ratio);
-    @return unquote("#{percentage($_column-ratio)} - #{$_grid-gutter-affordance}");
+    $_gutter-affordance: $_gutter + ($_gutter * $_column-ratio);
+    @return unquote("#{percentage($_column-ratio)} - #{$_gutter-affordance}");
   }
 }

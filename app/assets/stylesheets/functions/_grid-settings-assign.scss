@@ -1,0 +1,11 @@
+// Conveniently assign/update values in the `$grid-settings` map
+//
+// `$grid-settings: grid-settings((key:value));`
+
+@function grid-settings-assign($map) {
+  @if type-of($map) == map {
+    @return map-merge($grid-settings, $map);
+  } @else {
+    @error "`grid-settings-assign` recived `#{map}` but requires a map";
+  }
+}

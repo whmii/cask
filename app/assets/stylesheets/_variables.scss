@@ -1,21 +1,28 @@
 // Grid Settings
 // ============================================================
 
-$grid-settings: ();
+$grid-defaults: (
+  gutter: 1.25rem,
+  row-width: 80rem,
+  text-direction: ltr,
+  total-columns: 12
+);
 
-$text-direction: ltr;
+$grid-settings: () !default;
 
-@if $text-direction == ltr {
-  $default-float: left !global;
-  $opposite-direction: right !global;
-} @else if $text-direction == rtl {
-  $default-float: right !global;
-  $opposite-direction: left !global;
+@if grid-settings(text-direction) == ltr {
+  $grid-settings:
+    grid-settings-assign((
+      default-float: left,
+      opposite-direction: right
+    ));
+} @else if grid-settings(text-direction) == rtl {
+  $grid-settings:
+    grid-settings-assign((
+      default-float: right,
+      opposite-direction: left
+    ));
 }
-
-$grid-row-width: 80rem !default;
-$grid-gutter: 1.25rem !default;
-$grid-total-columns: 12 !default;
 
 // ========= Media Queries =========
 

@@ -3,11 +3,11 @@
 @mixin grid-push($push: false) {
   @include grid-is-zero-error(grid-push, $push);
   @if $push {
-    $_grid-gutter-affordance: $grid-gutter * $push;
-    $_margin-value: calc(#{unquote(grid-calc($push))} + #{$_grid-gutter-affordance});
-    margin-#{$default-float}: $_margin-value;
+    $_gutter-affordance: grid-settings(gutter) * $push;
+    $_margin-value: calc(#{unquote(grid-calc($push))} + #{$_gutter-affordance});
+    margin-#{grid-settings(default-float)}: $_margin-value;
   } @else {
-    $_margin-value: $grid-gutter;
-    margin-#{$default-float}: $_margin-value;
+    $_margin-value: grid-settings(gutter);
+    margin-#{grid-settings(default-float)}: $_margin-value;
   }
 }

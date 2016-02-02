@@ -9,7 +9,7 @@
   @if $center {
     float: none;
   } @else {
-    float: $default-float;
+    float: grid-settings(default-float);
   }
 
   width: calc(#{grid-calc($columns, $collapse)});

@@ -5,13 +5,13 @@
     $center: false
   ) {
   @if $center {
-    margin-#{$default-float}: auto;
-    margin-#{$opposite-direction}: auto;
+    margin-#{grid-settings(default-float)}: auto;
+    margin-#{grid-settings(opposite-direction)}: auto;
   } @else if $collapse {
-    margin-#{$default-float}: 0;
-    margin-#{$opposite-direction}: -($grid-gutter);
+    margin-#{grid-settings(default-float)}: 0;
+    margin-#{grid-settings(opposite-direction)}: -(grid-settings(gutter));
   } @else {
-    margin-#{$default-float}: $grid-gutter;
-    margin-#{$opposite-direction}: 0;
+    margin-#{grid-settings(default-float)}: grid-settings(gutter);
+    margin-#{grid-settings(opposite-direction)}: 0;
   }
 }

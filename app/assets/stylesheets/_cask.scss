@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 
-@import "variables";
-
 @import "functions/all";
+
+@import "variables";
 
 @import "mixins/all";
