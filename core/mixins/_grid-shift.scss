@@ -2,10 +2,11 @@
 
 @mixin grid-shift($shift: false) {
   @include grid-is-zero-error(grid-shift, $shift);
-
   @if $shift {
     $_shift-value: calc(#{unquote(grid-calc($shift))} + #{grid-settings(gutter)});
     #{grid-settings(default-float)}: $_shift-value;
+  } @else {
+    #{grid-settings(default-float)}: auto;
   }
 
   position: relative;
