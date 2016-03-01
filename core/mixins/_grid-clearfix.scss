@@ -6,7 +6,7 @@
     &::before {
       clear: both;
       content: "";
-      display: table;
+      display: block;
     }
   }
 
@@ -14,7 +14,7 @@
     &::after {
       clear: both;
       content: "";
-      display: table;
+      display: block;
     }
   }
 
