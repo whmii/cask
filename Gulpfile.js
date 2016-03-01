@@ -5,7 +5,7 @@ var gulp = require("gulp"),
   haml = require('gulp-ruby-haml');;
 
 var paths = {
-  scss: ["./app/assets/stylesheets/**/*.scss",
+  scss: ["./core/**/*.scss",
   "./contrib/stylesheets/*.scss"],
   haml: './contrib/views/*.haml'
 };
