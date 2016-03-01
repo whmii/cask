@@ -2,7 +2,7 @@
   "name": "Cask",
   "version": "0.2.0",
   "description": "A simple relible float based grid system",
-  "main": "Gulpfile.js",
+  "main": "core/_cask.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/whmii/cask.git"

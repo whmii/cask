@@ -14,6 +14,6 @@ module Cask
       end
     end
   else
-    Sass.load_paths << File.expand_path("../../app/assets/stylesheets", __FILE__)
+    Sass.load_paths << File.expand_path("../../core", __FILE__)
   end
 end
