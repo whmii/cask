@@ -1,0 +1,37 @@
+{
+  "authors": [
+    {
+      "name": "Will H McMahan",
+      "url": "http://mcmahan.me"
+    }
+  ],
+  "description": "A simple relible float based grid system built with calc",
+  "homepage": "http://whmii.github.com/cask",
+  "ignore": [
+    "**/.*",
+    "bin",
+    "cask.gemspec",
+    "contrib",
+    "Gemfile.lock",
+    "index.js",
+    "lib",
+    "Rakefile",
+    "node_modules",
+    "CONTRIBUTING.md"
+  ],
+  "keywords": [
+    "css",
+    "mixins",
+    "sass",
+    "grid",
+    "scss"
+  ],
+  "license": "MIT",
+  "main": "core/_cask.scss",
+  "name": "cask",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whmii/cask.git"
+  },
+  "version": "0.3.0"
+}

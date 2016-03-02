@@ -1,7 +1,7 @@
 {
   "name": "cask-grid",
   "version": "0.3.0",
-  "description": "A simple relible float based grid system",
+  "description": "A simple relible float based grid system built with calc",
   "main": "index.js",
   "repository": {
     "type": "git",
