@@ -2,17 +2,6 @@
 
 A simple reliable float based grid system, built with calc.
 
-## Todo
-- [x] grid columns
-- [x] grid 'rows'
-- [x] centered grids
-- [x] push grids
-- [x] shifting columns
-- [x] collapsing column gutters
-- [x] nestable columns
-- [x] throwing errors on invalid inputs
-- [x] parse column span inputs like `grid-column(2 of 4)`
-
 ## Installation
 
 Add this line to your application's Gemfile:
