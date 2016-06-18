@@ -3,47 +3,43 @@
 
 .header {
   @include grid-row();
-  margin-bottom: 1em;
+  font-size: $small-font-size;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  margin-bottom: 0;
+  max-width: 1100px;
+  padding: $base-spacing $base-spacing 0;
 
   .title {
-    background-color: $base-font-color;
-    color: white;
-    font-size: 6.25rem;
+    float: left;
     margin-bottom: 0;
-    padding-bottom: 0.5rem;
-    text-align: center;
-
-    small {
-      display: block;
-      font-size: 1rem;
-      line-height: 1.5;
-      margin-bottom: 1rem;
-    }
-
-    a {
-      color: white;
-
-      &.contact {
-        margin: 0 0.75em;
-      }
-    }
   }
 
-  .description li {
-    border-bottom: $base-border;
-    padding: $small-spacing;
+  .logo {
+    display: block;
+    margin-right: $base-spacing;
+    margin-top: 5px;
+    width: 157px;
   }
+  a {
+    color: $base-font-color;
+    float: left;
+    padding: $base-spacing;
 
-  @media #{$small} {
-    display: flex;
-
-    .title {
-      @include grid-column($columns: 6);
+    &:hover {
+      color: $action-color;
     }
+  }
+}
 
-    .description {
-      @include grid-column($columns: 6);
-    }
+.hero {
+  color: $alt-font-color;
+  text-align: center;
+  margin: 80px 60px 40px;
+
+  h2 {
+    margin-bottom: $large-spacing;
   }
 }
 
@@ -51,7 +47,6 @@
 
   .section-title {
     @include grid-row($max-width: null);
-    background-color: whitesmoke;
     line-height: 4;
     text-align: center;
     white-space: nowrap;
@@ -60,9 +55,7 @@
   .row {
     @include grid-row();
     background-color: $medium-gray;
-    margin-bottom: 1em;
-    padding-bottom: em(2);
-    padding-top: em(2);
+    margin-bottom: $base-spacing;
   }
 
   .content {
@@ -77,10 +70,11 @@
     color: $base-background-color;
     display: block;
     font-family: $monospace-font-family;
-    -webkit-font-smoothing: antialiased;
     line-height: 1.5em;
+    padding: 3px 0;
     text-align: center;
     white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
 
     &::after {
       border-color: $light-gray;
@@ -120,6 +114,10 @@
   }
 
   .col-6-collapse {
+
+    &:last-child {
+      border-right: 0;
+    }
 
     @media #{$small} {
       @include grid-column($columns: 6, $collapse: true);
@@ -165,16 +163,16 @@
   .col-4-shift-1 {
 
     @media #{$small} {
-      @include grid-column($columns: 4);
-      @include grid-shift($shift: 4);
+      @include grid-column($columns: 5);
+      @include grid-shift($shift: 5);
     }
   }
 
   .col-4-shift-2 {
 
     @media #{$small} {
-      @include grid-column($columns: 4);
-      @include grid-shift($shift: -4);
+      @include grid-column($columns: 5);
+      @include grid-shift($shift: -5);
     }
   }
 

@@ -1,8 +1,11 @@
 body {
+  -webkit-font-smoothing: antialiased;
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  letter-spacing: 0.01em;
   line-height: $base-line-height;
+  margin: 0;
 }
 
 h1,
@@ -11,8 +14,10 @@ h3,
 h4,
 h5,
 h6 {
+  color: $alt-font-color;
   font-family: $heading-font-family;
-  font-size: $base-font-size;
+  font-size: $large-font-size;
+  font-weight: 500;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }

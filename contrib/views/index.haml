@@ -12,27 +12,18 @@
   %body
     %header.header
       %h1.title
-        Cask
-        %small
-          A simple relible float based grid system.
-        %small
-          %a.contact{ href: "https://github.com/whmii/cask" }
-            github
-          %a.contact{ href: "https://twitter.com/WHMII" }
-            @whmii
-      %ul.description
-        %li
-          Cask is only ~84 lines of code so its basically fully knowable
-        %li
-          Because of its simplicity there is virtually no “where is this coming from!?”
-        %li
-          The syntax for media queries is greatly simplified
-        %li
-          There is no use of relative positioning or nth child selectors
-        %li
-          Cask is built around defining as few attributes as possible
-        %li
-          It’s easy to use in conjunction with flex-box
+        %img.logo{ src: "assets/cask-logo.svg" }
+      %nav
+        %a.contact{ href: "https://cask.readme.io/v0.3.2/docs" }
+          Documentation
+        %a.contact{ href: "https://github.com/whmii/cask" }
+          GitHub
+    %section.hero
+      %h2
+        A lightweight grid system, built with calc
+      %p
+        Cask lets you create responsive, scalable, grids with calc and Sass.
+
     %main.example
       %section
         %h1.section-title

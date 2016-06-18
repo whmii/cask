@@ -4,27 +4,31 @@ $heading-font-family: $base-font-family;
 $monospace-font-family: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 16px;
+$large-font-size: 30px;
+$small-font-size: 14px;
 
 // Line height
-$base-line-height: 1.5;
-$heading-line-height: 1.2;
+$base-line-height: 1.6;
+$heading-line-height: 1.1;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$base-spacing: 15px;
+$small-spacing: 10px;
+$large-spacing: 20px;
 $base-z-index: 0;
 
 // Colors
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
+$red: #E81B23;
+$dark-gray: #2d2d2d;
+$medium-gray: #4d4d4d;
 $light-gray: #ddd;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$alt-font-color: $medium-gray;
+$action-color: $red;
 
 // Border
 $base-border-color: $light-gray;
