@@ -1,7 +1,4 @@
-require "cask/engine"
+require "cask/generator"
 
 cask_path = File.expand_path("../../core", __FILE__)
-ENV["SASS_PATH"] = [
-  ENV["SASS_PATH"],
-  cask_path,
-].compact.join(File::PATH_SEPARATOR)
+ENV["SASS_PATH"] = File.join([ENV["SASS_PATH"], cask_path].compact)
