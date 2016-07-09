@@ -1,3 +1,3 @@
-module Cask
-  VERSION = "0.3.2"
+module cask
+  VERSION = "1.8.0"
 end
